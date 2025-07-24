@@ -13,7 +13,7 @@ const banner = [
     {
 
         id: 2,
-        image: "../public/images/banner image/img2.jpg",
+        image: "/images/banner image/img2.jpg",
         title: "Proper Database Security", 
         buttonText: "Read More"
 
