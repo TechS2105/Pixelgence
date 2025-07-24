@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'bannerTextFont';
+    src: url('../fonts/syne/TTF/Syne-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'bannerContentButton';
+    src: url('../fonts/archivo/Archivo-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'navigationFont';
+    src: url('../fonts/heebo/Heebo-Medium.ttf');
+}
+
+.bannderDiv{
+
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    margin-bottom: 50rem;
+
+}
+
+.bannderDiv > .swiperCarousel{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: baseline;
+
+}
+
+.swiperCarousel > .swiperBanner{
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.swiperBanner > img:nth-child(1){
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    animation: imageAnime 40s ease infinite;
+
+}
+
+@keyframes imageAnime {
+
+    0%{
+
+        transform: scale(1);
+
+    }
+    100%{
+
+        transform: scale(1.5);
+
+    }
+
+}
+
+.swiperBanner > .swiperBannerContent{
+
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 500px;
+    height: 500px;
+
+}
+
+.swiperBannerContent > h1{
+
+    font-size: 80px;
+    font-family: 'bannerTextFont';
+    color: #fff;
+    font-weight: 500;
+    line-height: 80px;
+    margin-bottom: 30px;
+
+}
+
+.swiperBannerContent > button{
+
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    margin-left: 15px;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'bannerContentButton';
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    position: relative;
+    border: 1px solid #fff;
+    z-index: 99999999;
+
+}
+
+.swiperBannerContent > button:hover{
+
+    background-color: #fff;
+    color: #292929;
+    border: none;
+    color: #292929;
+
+}
+
+.swiperBannerContent > button::before{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0%;
+    content: "";
+    background-image: linear-gradient(to right, #fff, rgb(255, 255, 255));
+    z-index: -2;
+    transition: all 0.8s ease;
+
+}
+
+.swiperBannerContent > button:hover::before{
+
+    width: 100%;
+
+}
+
+.homeBannerNavigation{
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height:3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.homeBannerNavigation > .bannerNav{
+
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+.bannerNav > span{
+
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-family: 'navigationFont';
+    position: relative;
+
+}
+
+.bannerNav > span:hover{
+
+    background-image: linear-gradient(to right, blue, aqua);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.bannerNav > span:nth-child(1)::after{
+
+    position: absolute;
+    top: 8px;
+    left: 50px;
+    height: 1px;
+    width: 100px;
+    content: "";
+    background-color: #fff;
+
+}
+
+
+
