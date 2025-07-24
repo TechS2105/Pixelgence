@@ -1,12 +1,75 @@
-# React + Vite
+# CreataDigital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React + Vite web application template featuring modular components, custom fonts, and responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19 with Vite for fast development and HMR
+- Modular component structure (`src/components`)
+- Custom fonts (Syne, Heebo, Archivo) with open font licenses
+- Swiper carousel for banners
+- Responsive navigation with side menu
+- ESLint configuration for code quality
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+CreataDigital/
+├── custom objects/        # Custom JS objects (e.g., banner data)
+├── public/                # Static assets (fonts, images, styles)
+├── src/                   # Source code (components, layouts, main app)
+├── index.html             # Main HTML entry
+├── package.json           # Project dependencies and scripts
+├── vite.config.js         # Vite configuration
+├── eslint.config.js       # ESLint configuration
+└── README.md              # Project documentation
+```
+
+## Setup Instructions
+
+1. **Install dependencies:**
+
+   ```sh
+   npm install
+   ```
+
+2. **Start development server:**
+
+   ```sh
+   npm run dev
+   ```
+
+3. **Lint code:**
+
+   ```sh
+   npm run lint
+   ```
+
+4. **Build for production:**
+
+   ```sh
+   npm run build
+   ```
+
+5. **Preview production build:**
+   ```sh
+   npm run preview
+   ```
+
+## Usage
+
+- Open [http://localhost:5173](http://localhost:5173) in your browser after starting the dev server.
+- Explore the homepage banner carousel, navigation menu, and other pages.
+
+## License
+
+Font assets are licensed under the [SIL Open Font License](public/fonts/syne/OFL-LICENSE) and [Heebo OFL](public/fonts/heebo/OFL.txt).  
+Project code is open-source under standard open-source licenses.
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements and bug fixes.
+
+## Contact
+
+For questions or suggestions, please open an issue in the GitHub repository.
