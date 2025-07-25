@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'portfolioMainContentFont';
+    src: url('../fonts/syne/Webfonts/Syne-Bold.woff2');
+}
+
+@font-face {
+    font-family: 'portfolioSpanContentFont';
+    src: url('../fonts/syne/Webfonts/Syne-Regular.woff');
+}
+
+.portfolioDiv{
+
+    width: 100%;
+    height: 120vh;
+
+}
+
+.portfolioDiv > .portfolioContentDiv{
+
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.portfolioContentDiv > .contentSection{
+
+    padding-left: 10rem;
+    width: 30rem;
+
+}
+
+.contentSection > span{
+
+    display: inline-flex;
+    font-family: 'portfolioSpanContentFont';
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+    margin-bottom: 15px;
+
+}
+
+.contentSection > h2{
+
+    font-size: 3rem;
+    font-family: 'portfolioMainContentFont';
+    font-weight: 500;
+
+}
+
+.portfolioDiv > .portfoliosSection{
+
+    width: 100%;
+    height: 33rem;
+    /* background-color: antiquewhite; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+
+}
+
+.portfoliosSection > .portfolioBoxes{
+
+    width: 90%;
+    height: 80%;
+    /* background-color: aqua; */
+    margin-right: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+}
+
+.portfolioBox{
+
+    /* background-color: black; */
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.portfolioBox > .portfolioBoxImage{
+
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #fff;
+
+}
+
+.portfolioBoxImage > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s ease;
+    transform: scale(1.1);
+
+}
+
+.portfolioBoxImage > img:hover{
+
+    opacity: 0.3;
+    transform: scale(1);
+
+}
+
+.portfolioBox > .portfolioImgBoxTitle{
+
+    width: 100%;
+    height: 15%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+
+}
+
+.portfolioImgBoxTitle > h3 a{
+
+    font-family: 'portfolioMainContentFont';
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #292929;
+
+}
