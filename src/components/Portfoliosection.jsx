@@ -5,6 +5,7 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { NavLink } from 'react-router-dom';
 import PortfolioContent from '../../custom objects/portfoliocontent.js';
+import SecondScrollBar from '../components/Secondscrollbar.jsx';
 
 function Portfoliosection() {
     
@@ -12,7 +13,7 @@ function Portfoliosection() {
 
         <>
         
-            
+            <SecondScrollBar />
             
             <div className={PortfolioSectionStyle.portfolioDiv}>
 
@@ -71,7 +72,7 @@ function Portfoliosection() {
                         
 
                     </Swiper>
-
+                    
                 </div>
 
             </div>
