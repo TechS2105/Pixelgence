@@ -1,4 +1,4 @@
-# CreataDigital
+# Pixelgence
 
 A modern React + Vite web application template featuring modular components, custom fonts, and responsive design.
 

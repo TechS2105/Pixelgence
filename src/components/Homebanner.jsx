@@ -10,62 +10,84 @@ import HomeBannerContent from '../components/Homebannercontent.jsx';
 import ScrollBar from '../components/Scrollbar.jsx';
 
 function Homebanner() {
-    
+
     return (
 
       <>
       
         <ScrollBar />
+
         <div className={HomeBannerStyle.bannderDiv}>
-        <Swiper
-          className={HomeBannerStyle.swiperCarousel}
+
+          <Swiper className={HomeBannerStyle.swiperCarousel}
+            
           slidesPerView={1}
           loop={true}
           effect={"fade"}
-          speed={2500}
-          autoplay={{
-            delay: 3000,
-          }}
-          navigation={{
-            nextEl: ".nextButton",
-            prevEl: ".prevButton",
-          }}
-          modules={[Autoplay, Navigation, EffectFade]}
-        >
-          {Banners.map((banner) => {
-            return (
-              <SwiperSlide
-                className={HomeBannerStyle.swiperBanner}
-                key={banner.id}
-              >
-                <HomeBannerImage image={banner.image} title={banner.title} />
+          speed={1500}
 
-                <div className={HomeBannerStyle.swiperBannerContent}>
-                  <HomeBannerContent
-                    bannerTitle={banner.title}
-                    buttonText={banner.buttonText}
-                  />
-                </div>
+            autoplay={{
 
-                <div className={HomeBannerStyle.homeBannerNavigation}>
-                  <div className={HomeBannerStyle.bannerNav}>
-                    <span
-                      className={`${HomeBannerStyle.prevButton} prevButton`}
-                    >
-                      {" "}
-                      PREV{" "}
-                    </span>
-                    <span
-                      className={`${HomeBannerStyle.nextButton} nextButton`}
-                    >
-                      {" "}
-                      NEXT{" "}
-                    </span>
+              delay: 3000,
+
+            }}
+            
+            navigation={{
+
+              nextEl: ".nextButton",
+              prevEl: ".prevButton",
+
+            }}
+            
+            modules={[Autoplay, Navigation, EffectFade]}
+           
+          >
+            
+            {Banners.map((banner) => {
+            
+              return (
+              
+                <SwiperSlide className={HomeBannerStyle.swiperBanner} key={banner.id}>
+                  
+                  <HomeBannerImage image={banner.image} title={banner.title} />
+
+                  <div className={HomeBannerStyle.swiperBannerContent}>
+
+                    <HomeBannerContent
+                      
+                      bannerTitle={banner.title}
+                      buttonText={banner.buttonText}
+          
+                    />
+
                   </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+
+                  <div className={HomeBannerStyle.homeBannerNavigation}>
+
+                    <div className={HomeBannerStyle.bannerNav}>
+
+                        <span className={`${HomeBannerStyle.prevButton} prevButton`}>
+                          
+                          PREV
+                        
+                        </span>
+                      
+                        <span className={`${HomeBannerStyle.nextButton} nextButton`}>
+                        
+                          NEXT
+                        
+                        </span>
+                      
+                    </div>
+
+                  </div>
+
+                </SwiperSlide>
+
+              );
+              
+            })}
+            
             </Swiper>
             
         </div>
