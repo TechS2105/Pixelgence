@@ -1,5 +1,6 @@
 import React from 'react';
-import HomeBanner from './Homebanner';
+import HomeBanner from '../components/Homebanner';
+import PortfolioSection from '../components/Portfoliosection';
 
 function Home() {
     
@@ -10,6 +11,7 @@ function Home() {
             <main>
 
                 <HomeBanner />
+                <PortfolioSection />
 
             </main>
             
