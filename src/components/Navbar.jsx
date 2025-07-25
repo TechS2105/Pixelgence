@@ -113,15 +113,15 @@ function Navbar() {
                     
                     <div className={NavStyle.sideNavMenuContent}>
 
-                        <h2> Incredible <br/> and modern <br/> design </h2>
+                        <h2> Elevating <br /> Brands Through <br /> Innovation </h2>
                         
                         <p>
 
-                            Contemporary theme especially made for technology & software developing company websites. Deon, a new age of WP design.
+                            We transform brands with AI, full-stack development, bold design, and inventive marketing to shape tomorrow’s digital future.
 
                         </p>
 
-                        <NavLink to="#">deon@qodeinteractive.com</NavLink>
+                        <NavLink to="#">pixelgence@businessemail.com</NavLink>
 
                     </div>
 
