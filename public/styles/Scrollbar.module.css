@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'scollBarFont';
+    src: url('../fonts/heebo/Heebo-Regular.ttf');
+}
+
+.scrollBar{
+
+    position: absolute;
+    top: 0;
+    left: 3%;
+    width: 1px;
+    height: 100vh;
+    background-color: #851ced;
+
+}
+
+.scrollBar::before{
+
+    position: absolute;
+    content: "";
+    top: 90%;
+    /* background-image: linear-gradient(to top, blue, rgb(255, 255, 255) 50%); */
+    background-color: #fff;
+    width: 1px ;
+    height: 50px;
+
+}
+
+.scrollBar::after{
+
+    position: absolute;
+    top: 90.1%;
+    left: 20px;
+    content: "Keep Scrolling";
+    color: #fff;
+    font-family: 'scollBarFont';
+    font-size: 15px;
+
+}

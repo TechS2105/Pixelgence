@@ -7,82 +7,70 @@ import 'swiper/css/effect-fade';
 import { Autoplay, Navigation, EffectFade } from 'swiper/modules';
 import HomeBannerImage from '../components/Homebannerimage.jsx';
 import HomeBannerContent from '../components/Homebannercontent.jsx';
+import ScrollBar from '../components/Scrollbar.jsx';
 
 function Homebanner() {
     
     return (
 
+      <>
+      
+        <ScrollBar />
         <div className={HomeBannerStyle.bannderDiv}>
+        <Swiper
+          className={HomeBannerStyle.swiperCarousel}
+          slidesPerView={1}
+          loop={true}
+          effect={"fade"}
+          speed={2500}
+          autoplay={{
+            delay: 3000,
+          }}
+          navigation={{
+            nextEl: ".nextButton",
+            prevEl: ".prevButton",
+          }}
+          modules={[Autoplay, Navigation, EffectFade]}
+        >
+          {Banners.map((banner) => {
+            return (
+              <SwiperSlide
+                className={HomeBannerStyle.swiperBanner}
+                key={banner.id}
+              >
+                <HomeBannerImage image={banner.image} title={banner.title} />
 
-            <Swiper className={HomeBannerStyle.swiperCarousel}
-            
-                slidesPerView={1}
-                loop={true}
-                effect={'fade'}
-                speed={2500}
-                autoplay={{
+                <div className={HomeBannerStyle.swiperBannerContent}>
+                  <HomeBannerContent
+                    bannerTitle={banner.title}
+                    buttonText={banner.buttonText}
+                  />
+                </div>
 
-                    delay: 3000
-
-                }}
-
-                navigation={{
-
-                    nextEl: '.nextButton',
-                    prevEl: '.prevButton'
-
-                }}
-
-                modules={[Autoplay, Navigation, EffectFade]}
-                
-            >
-
-                {Banners.map((banner) => {
-
-                    return (
-
-                        <SwiperSlide className={HomeBannerStyle.swiperBanner} key={banner.id}>
-
-                            <HomeBannerImage
-                            
-                                image={banner.image}
-                                title={banner.title}
-                                
-                            />
-
-                            <div className={HomeBannerStyle.swiperBannerContent}>
-
-                                <HomeBannerContent
-                                
-                                    bannerTitle={banner.title}
-                                    buttonText={banner.buttonText}
-                                    
-                                />
-
-                            </div>
-
-                            <div className={HomeBannerStyle.homeBannerNavigation}>
-
-                                <div className={HomeBannerStyle.bannerNav}>
-
-                                    <span className={`${HomeBannerStyle.prevButton} prevButton`}> PREV </span>
-                                    <span className={`${HomeBannerStyle.nextButton} nextButton`}> NEXT </span>
-
-                                </div>
-
-                            </div>
-
-                        </SwiperSlide>
-
-                    );
-
-                })}
-                
-
+                <div className={HomeBannerStyle.homeBannerNavigation}>
+                  <div className={HomeBannerStyle.bannerNav}>
+                    <span
+                      className={`${HomeBannerStyle.prevButton} prevButton`}
+                    >
+                      {" "}
+                      PREV{" "}
+                    </span>
+                    <span
+                      className={`${HomeBannerStyle.nextButton} nextButton`}
+                    >
+                      {" "}
+                      NEXT{" "}
+                    </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
             </Swiper>
-
+            
         </div>
-
+        
+      </>
     );
 
 }
