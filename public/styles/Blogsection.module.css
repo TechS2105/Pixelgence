@@ -1,0 +1,315 @@
+@font-face {
+    font-family: 'blogTitleFont';
+    src: url('../fonts/syne/OTF/Syne-Bold.otf');
+}
+
+@font-face {
+    font-family: 'blogDateFont';
+    src: url('../fonts/syne/OTF/Syne-Regular.otf');
+}
+
+@font-face {
+    font-family: 'blogReadMoreFont';
+    src: url('../fonts/archivo/Archivo-Regular.ttf');
+}
+
+.blogSection{
+
+    width: 100%;
+    height: 120vh;
+    /* background-color: #e03d3d; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.blogSection > .swiperSection{
+
+    width: 80%;
+    height: 80%;
+    /* background-color: #fff; */
+
+}
+
+.swiperBox{
+
+    width: 50rem;
+    height: 100%;
+    /* background-color: #292929; */
+    overflow: hidden;
+
+}
+
+.swiperBox > a{
+
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #292929;
+    overflow: hidden;
+
+}
+
+a > .swiperImage{
+
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+
+}
+
+.swiperImage > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.8s ease;
+
+}
+
+.swiperImage > img:hover{
+
+    transform: scale(1.1);
+
+}
+
+.swiperImage > .zoomImage:hover{
+
+    transform: scale(1.1);
+
+}
+
+a > .swiperContent {
+
+    width: 100%;
+    height: 25%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: -2;
+
+}
+
+.swiperContent > p{
+
+    font-family: 'blogDateFont';
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    text-transform: uppercase;
+
+}
+
+.swiperContent > h2{
+
+    font-family: 'blogTitleFont';
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 30px;
+
+}
+
+.swiperContent > a{
+
+    font-family: 'blogReadMoreFont';
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #292929;
+    font-size: 13px;
+    letter-spacing: 3px;
+    position: relative;
+    padding-left: 9rem;
+    transition: all 0.8s ease;
+    display: inline-flex;
+    width: 100%;
+    font-weight: 600;
+
+}
+
+.swiperContent > a:hover{
+
+    padding-left: 0rem;
+
+}
+
+.swiperContent > a::before{
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8rem;
+    background-color: rgb(77, 104, 253);
+    height: 1.5px;
+    content: "";
+    transition: all 0.8s ease;
+
+
+}
+
+.swiperContent > a:hover::before{
+
+    width: 0%;
+
+}
+
+.swiperContent > .beforeAnimation {
+
+    padding-left: 0rem;
+
+}
+
+.swiperContent > .beforeAnimation::before{
+
+    width: 0%;
+
+}
+
+.blogSection > .swiperNavigationSection{
+
+    width: 80%;
+    height: 7%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+.swiperNavigationSection > .swiperNavigation{
+
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+    gap: 30px;
+    transition: all 0.8s ease;
+
+}
+
+.swiperNavigation:hover > :not(:hover){
+
+    filter: blur(100px);
+
+}
+
+.swiperNavigation > .prevArrow{
+
+    height: 100%;
+    width: 10%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #292929;
+    transition: all 0.8s ease;
+    overflow: hidden;
+
+}
+
+.prevArrow > svg{
+
+    color: #292929;
+    font-size: 40px;
+    transition: all 0.8s ease;
+
+}
+
+.swiperNavigation > .prevArrow:hover{
+
+    border: none;
+    background-color: #292929;
+    transform: scale(1.2) rotate(360deg);
+    border-radius: 0px;
+
+}
+
+.prevArrow:hover > svg{
+
+    color: #fff;
+    animation: prevArrowSVG 1.5s linear;
+
+}
+
+@keyframes prevArrowSVG {
+    
+    from{
+
+        transform: translateX(100%);
+
+    }to{
+
+        transform: translateX(-100%);
+
+    }
+
+}
+
+
+.swiperNavigation > .nextArrow{
+
+    height: 100%;
+    width: 10%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    border: 1px solid #292929;
+    overflow: hidden;
+
+}
+
+.nextArrow > svg{
+
+    color: #292929;
+    font-size: 40px;
+    transition: all 0.8s ease;
+
+}
+
+.swiperNavigation > .nextArrow:hover{
+
+    transform: scale(1.1) rotate(360deg);
+    background-color: #292929;
+    border: none;
+    border-radius: 0px;
+
+}
+
+
+.nextArrow:hover > svg{
+
+    color: #fff;
+    animation: svgAnimation 1.5s linear;
+
+}
+
+@keyframes svgAnimation {
+    
+    from{
+
+        transform: translateX(-100%);
+
+    }to{
+
+        transform: translateX(100%);
+
+    }
+
+}
+

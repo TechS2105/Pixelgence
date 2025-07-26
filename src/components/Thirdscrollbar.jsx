@@ -5,7 +5,7 @@ function Thirdscrollbar() {
     
     return (
 
-        <div className={ThirdScrollBarStyle.scrollBar} data-scroll data-scroll-speed={-0.2}>
+        <div className={ThirdScrollBarStyle.scrollBar} data-scroll data-scroll-speed={0.2}>
 
             <span></span>
 

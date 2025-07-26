@@ -7,7 +7,7 @@ function Scrollbar() {
 
         <>
         
-            <div className={ScrollBarStyle.scrollBar}></div>
+            <div className={ScrollBarStyle.scrollBar} data-scroll data-scroll-speed={0.2}></div>
             
         </>
 

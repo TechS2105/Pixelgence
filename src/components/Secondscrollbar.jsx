@@ -5,7 +5,7 @@ function Secondscrollbar() {
     
     return (
 
-        <div className={SecondScrollBarStyle.scrollBarStyle}>
+        <div className={SecondScrollBarStyle.scrollBarStyle} data-scroll data-scroll-speed={0.2}>
 
             <span></span>
 

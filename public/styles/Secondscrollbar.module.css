@@ -11,6 +11,7 @@
     background-color: blueviolet;
     width: 1.5px;
     height: 120vh;
+    z-index: -2;
 
 }
 
