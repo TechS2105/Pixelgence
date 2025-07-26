@@ -15,7 +15,7 @@ function Portfoliosection() {
         
             <SecondScrollBar />
             
-            <div className={PortfolioSectionStyle.portfolioDiv}>
+            <div className={PortfolioSectionStyle.portfolioDiv} data-scroll data-scroll-speed={0.2}>
 
                 <div className={PortfolioSectionStyle.portfolioContentDiv}>
 

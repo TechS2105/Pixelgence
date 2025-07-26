@@ -17,7 +17,7 @@ function Homebanner() {
       
         <ScrollBar />
 
-        <div className={HomeBannerStyle.bannderDiv}>
+        <div className={HomeBannerStyle.bannderDiv} data-scroll data-scroll-speed={-0.2}>
 
           <Swiper className={HomeBannerStyle.swiperCarousel}
             
@@ -51,7 +51,7 @@ function Homebanner() {
                   
                   <HomeBannerImage image={banner.image} title={banner.title} />
 
-                  <div className={HomeBannerStyle.swiperBannerContent}>
+                  <div className={HomeBannerStyle.swiperBannerContent} data-scroll data-scroll-speed={0.5}>
 
                     <HomeBannerContent
                       

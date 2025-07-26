@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'thirdScrollBarFont';
+    src: url('../fonts/heebo/Heebo-Regular.ttf');
+}
+
+.scrollBar{
+
+    width: 1px;
+    height: 100%;
+    background-color: rgb(166, 18, 240);
+    position: absolute;
+    left: 3%;
+    z-index: 9999999999;
+
+}
+
+.scrollBar > span{
+
+    position: absolute;
+    top: 88%;
+    background-color: #fff;
+    height: 8%;
+    width: 100%;
+
+}
+
+.scrollBar > span::after{
+
+    position: relative;
+    left: 1rem;
+    top: 0.5rem;
+    content: "Keep Scrolling";
+    color: #fff;
+    font-family: 'thirdScrollBarFont';
+    font-size: 15px;
+    letter-spacing: 1px;
+
+}
