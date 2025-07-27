@@ -20,7 +20,7 @@ function Ourteam() {
 
                 <div className={OurTeamStyle.ourTeamBox1}>
 
-                    <img src="../../public/images/our team image/img1.jpeg" alt="" />
+                    <img src="/images/our team image/img1.jpeg" alt="Our Team Image" />
 
                 </div>
 
