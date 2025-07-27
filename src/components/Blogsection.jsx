@@ -7,6 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 import Blogs from '../../custom objects/blog.js';
+import ForuthScrollBar from '../components/Fourthscrollbar.jsx';
 
 function Blogsection() { 
 
@@ -15,7 +16,8 @@ function Blogsection() {
     return (
 
         <>
-        
+            <ForuthScrollBar />
+
             <div className={BlogSectionStyle.blogSection} data-scroll data-scroll-speed={0.2}>
 
                 <Swiper className={BlogSectionStyle.swiperSection}

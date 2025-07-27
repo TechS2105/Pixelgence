@@ -4,6 +4,7 @@ import WebSolutionSection from '../components/Websolutionsection';
 import BlogSection from '../components/Blogsection';
 import PortfolioSection from '../components/Portfoliosection';
 import LocomotiveScroll from 'locomotive-scroll';
+import OurTeam from '../components/Ourteam';
 
 function Home() {
 
@@ -37,6 +38,7 @@ function Home() {
                 <PortfolioSection />
                 <WebSolutionSection />
                 <BlogSection />
+                <OurTeam />
 
             </main>
             

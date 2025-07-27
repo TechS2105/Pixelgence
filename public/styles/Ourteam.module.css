@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'teamHeadingParaFont';
+    src: url('../fonts/syne/OTF/Syne-Regular.otf');
+}
+
+@font-face {
+    font-family: 'teamHeadingTitleFont';
+    src: url('../fonts/syne/OTF/Syne-Bold.otf');
+}
+
+@font-face {
+    font-family: 'teamSubParaFont';
+    src: url('../fonts/archivo/Archivo-Regular.ttf');
+}
+
+.ourTeamSection{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+.ourTeamSection > .ourTeamBox1{
+
+    width: 65%;
+    /* background-color: antiquewhite; */
+    height: 90%;
+
+}
+
+.ourTeamBox1 > img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+
+}
+
+
+.ourTeamSection > .ourTeamBox2{
+
+    width: 35%;
+    height: 80%;
+
+}
+
+.ourTeamBox2 > .teamBoxHeading{
+
+    padding-left: 30px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 10px;
+
+}
+
+.teamBoxHeading > p{
+
+    font-family: 'teamHeadingParaFont';
+    letter-spacing: 2px;
+
+}
+
+.teamBoxHeading > h2{
+
+    font-family: 'teamHeadingTitleFont';
+    font-size: 40px;
+    font-weight: 500;
+    width: 330px;
+
+}
+
+.ourTeamBox2 > .teamBoxContent{
+
+    height: 60%;
+
+}
+
+.teamBoxContent > .teamHeadingNames{
+
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 40px;
+    padding-right: 80px;
+
+}
+
+.teamHeadingNames > ul{
+
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid blue;
+    padding-bottom: 13px;
+
+}
+
+.teamHeadingNames ul > li{
+
+    font-family: 'teamHeadingTitleFont';
+    font-size: 1.4rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+
+}
+
+.teamHeadingNames ul > li::after{
+
+    position: absolute;
+    top: 39px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #292929;
+    content: "";
+    transition: all 0.8s ease 0.3s;
+
+}
+
+.teamHeadingNames ul > li.afterAnimation::after{
+
+    width: 100%;
+
+}
+
+.teamBoxContent > .teamContent{
+
+    padding-left: 40px;
+    padding-right: 80px;
+    padding-top: 20px;
+
+}
+
+.teamContent > p{
+
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-family: 'teamSubParaFont';
+    margin-bottom: 20px;
+
+}
+
+.teamContent > ul{
+
+    padding-left: 15px;
+    font-family: 'teamSubParaFont';
+    letter-spacing: 1px;
+    font-size: 15px;
+
+}
+
+.teamContent ul > li{
+
+    padding-bottom: 20px;
+
+
+}
