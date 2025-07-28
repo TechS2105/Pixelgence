@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import OurTeamStyle from '../../public/styles/Ourteam.module.css';
+import OurTeamContent from '../../custom objects/ourteamcontent.js';
 
 function Ourteam() {
 
@@ -18,18 +19,18 @@ function Ourteam() {
         
             <div className={OurTeamStyle.ourTeamSection}>
 
-                <div className={OurTeamStyle.ourTeamBox1}>
+                <div className={OurTeamStyle.ourTeamBox1} data-scroll data-scroll-speed={0.3}>
 
                     <img src="/images/our team image/img1.jpeg" alt="Our Team Image" />
 
                 </div>
 
-                <div className={OurTeamStyle.ourTeamBox2}>
+                <div className={OurTeamStyle.ourTeamBox2}  data-scroll data-scroll-speed={0.4}>
 
                     <div className={OurTeamStyle.teamBoxHeading}>
 
                         <p>EXPERTISE</p>
-                        <h2>Achive Success With Our Team</h2>
+                        <h2>Achieve Success With Our Team</h2>
 
                     </div>
 
@@ -51,7 +52,6 @@ function Ourteam() {
                                         >{name}</li>
 
                                     );
-                                    
 
                                 })}
 
@@ -59,20 +59,29 @@ function Ourteam() {
                             
                         </div>
 
-                        <div className={OurTeamStyle.teamContent}>
+                        {OurTeamContent.map((content, idx) => {
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsam. Inventore ut odit voluptatem reiciendis quas. Placeat repudiandae saepe.</p>
+                            return (
 
-                            <ul>
+                                <div className={activeIndex === idx ? OurTeamStyle.displayDiv : OurTeamStyle.teamContent} key={idx}>
 
-                                <li>Lorem, ipsum dolor sit amet consectetur</li>
-                                <li>Lorem, ipsum dolor consectetur</li>
-                                <li>Lorem, ipsum dolor sit consectetur</li>
-                                <li>Lorem, ipsum dolor sit amet </li>
+                                    <p className={OurTeamStyle.displayDivPara}>{ content.contentPara }</p>
 
-                            </ul>
+                                    <ul className={OurTeamStyle.displayDivUl}>
 
-                        </div>
+                                        <li>{content.bullet1}</li>
+                                        <li>{content.bullet2}</li>
+                                        <li>{content.bullet3}</li>
+                                        <li>{content.bullet4}</li>
+
+                                    </ul>
+
+                                </div>
+
+                            );
+
+                        })}
+                       
 
                     </div>
 

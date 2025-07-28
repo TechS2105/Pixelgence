@@ -5,6 +5,7 @@ import BlogSection from '../components/Blogsection';
 import PortfolioSection from '../components/Portfoliosection';
 import LocomotiveScroll from 'locomotive-scroll';
 import OurTeam from '../components/Ourteam';
+import Brands from '../components/Brands';
 
 function Home() {
 
@@ -32,13 +33,14 @@ function Home() {
 
         <>
         
-            <main data-scroll-container ref={scrollRef} locomotiveScroll>
+            <main data-scroll-container ref={scrollRef}>
 
                 <HomeBanner />
                 <PortfolioSection />
                 <WebSolutionSection />
                 <BlogSection />
                 <OurTeam />
+                <Brands />
 
             </main>
             
