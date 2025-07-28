@@ -4,11 +4,11 @@ import BrandLogoCarousel from '../components/Brandlogocarousel';
 import SecondBrandLogoCarousel from '../components/Secondbrandlogocarousel';
 import SixthScrollBar from '../components/Sixthscrollbar';
 
-let img1 = "../../public/images/brand logo image/img1.png";
-let img2 = "../../public/images/brand logo image/img2.png";
-let img5 = "../../public/images/brand logo image/img5.png";
-let img6 = '../../public/images/brand logo image/img6.png';
-let img7 = '../../public/images/brand logo image/img7.png';
+let img1 = "/images/brand logo image/img1.png";
+let img2 = "/images/brand logo image/img2.png";
+let img5 = "/images/brand logo image/img5.png";
+let img6 = '/images/brand logo image/img6.png';
+let img7 = '/images/brand logo image/img7.png';
 
 function Brands() {
     
