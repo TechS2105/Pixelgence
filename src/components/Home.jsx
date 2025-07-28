@@ -6,6 +6,7 @@ import PortfolioSection from '../components/Portfoliosection';
 import LocomotiveScroll from 'locomotive-scroll';
 import OurTeam from '../components/Ourteam';
 import Brands from '../components/Brands';
+import Footer from '../components/Footer';
 
 function Home() {
 
@@ -41,6 +42,7 @@ function Home() {
                 <BlogSection />
                 <OurTeam />
                 <Brands />
+                <Footer />
 
             </main>
             

@@ -1,0 +1,11 @@
+.scrollBar{
+
+    position: absolute;
+    left: 3%;
+    content: "";
+    width: 1.5px;
+    height: 70%;
+    z-index: -2;
+    background-color: blue;
+
+}
