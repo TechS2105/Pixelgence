@@ -18,9 +18,9 @@ function Brands() {
         
             <SixthScrollBar />
 
-            <div className={BrandStyle.brandContainer} data-scroll-container>
+            <div className={BrandStyle.brandContainer}>
 
-                <div className={BrandStyle.brandContent} data-scroll data-scroll-speed={-0.3}>
+                <div className={BrandStyle.brandContent} data-scroll data-scroll-speed={0.3}>
 
                     <div className={BrandStyle.brandText}>
 
@@ -33,7 +33,7 @@ function Brands() {
 
                 </div>
 
-                <div className={BrandStyle.brandLogos} data-scroll data-scroll-speed={-0.2}>
+                <div className={BrandStyle.brandLogos} data-scroll data-scroll-speed={0.2}>
 
                     <div className={BrandStyle.brandLogoCarousel}>
 

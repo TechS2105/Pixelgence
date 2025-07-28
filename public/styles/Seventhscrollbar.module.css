@@ -1,0 +1,9 @@
+.seventhScrollBar{
+
+    position: absolute;
+    left: 3%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, blue, aqua);
+    width: 1px;
+
+}
