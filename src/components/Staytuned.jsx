@@ -4,7 +4,7 @@ function Staytuned(props) {
     
     return (
 
-        <h1>{ props.heading }</h1>
+        <h1 style={props.styleState}>{ props.heading }</h1>
 
     );
 

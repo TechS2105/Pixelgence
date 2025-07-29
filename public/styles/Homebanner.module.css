@@ -45,20 +45,20 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-    animation: imageAnime 40s ease infinite;
+    animation: imageAnime 10s linear infinite;
 
 }
 
 @keyframes imageAnime {
 
-    0%{
+    50%{
 
-        transform: scale(1);
+        transform: scale(1.1);
 
     }
-    100%{
+    0%, 100%{
 
-        transform: scale(1.5);
+        transform: scale(1);
 
     }
 

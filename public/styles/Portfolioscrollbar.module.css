@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'portfolioScrollBarFont';
+    src: url('../fonts/heebo/Heebo-Medium.ttf');
+}
+
+.scrollBarStyle{
+
+    position: absolute;
+    left: 3%;
+    width: 1.2px;
+    background-color: blue;
+    height: 100%;
+
+}
+
+.scrollBarStyle > span{
+
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    background-color: #fff;
+
+}
+
+.scrollBarStyle > span::after{
+
+    position: relative;
+    left: 1rem;
+    content: "Keep Scrolling";
+    color: #fff;
+    font-family: 'portfolioScrollBarFont';
+    font-size: 15px;
+    letter-spacing: 1px;
+
+}

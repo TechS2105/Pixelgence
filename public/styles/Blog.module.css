@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'stayTunedFont';
+    src: url('../fonts/syne/OTF/Syne-Bold.otf');
+}
+
+.blogBannerSection{
+
+    width: 100%;
+    height: 100vh;
+    margin-top: -80px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.blogBannerSection > img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: blogBannerAnimation 10s ease;
+
+}
+
+@keyframes blogBannerAnimation {
+    
+    50%{
+
+        transform: scale(1.1);
+        filter: blur(0px);
+
+    }0%, 100%{
+
+        transform: scale(1);
+        filter: blur(5px);
+
+    }100%{
+
+        filter: blur(0px);
+
+    }
+
+}
+
+.blogStayTunedText{
+
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, aqua, blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.blogStayTunedText > h1{
+
+    font-family: 'stayTunedFont';
+    color: #fff;
+    font-size: 100px;
+    padding-left: 8%;
+    letter-spacing: 2px;
+
+}
