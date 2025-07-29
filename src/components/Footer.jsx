@@ -85,7 +85,11 @@ function Footer() {
 
                             <h2> Our Newsletter </h2>
 
-                            <NewsLetterForm />
+                            <NewsLetterForm
+                            
+                                FooterStyle={FooterStyle}
+                                
+                            />
 
                         </div>
 

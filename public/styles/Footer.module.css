@@ -23,6 +23,11 @@
     src: url('../fonts/heebo/Heebo-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'errorMessageFont';
+    src: url('../fonts/syne/OTF/Syne-Regular.otf');
+}
+
 footer{
 
     position: relative;
@@ -223,15 +228,7 @@ footer > .secondFooterBox{
 
 }
 
-.newsletterForm > form{
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-
-form > input{
+.newsletterForm form > input{
 
     background-color: #292929;
     width: 35vw;
@@ -307,4 +304,11 @@ form > button:hover::after{
 
 }
 
+.errorMessageStyle{
 
+    color: rgb(255, 255, 255);
+    font-family: 'errorMessageFont';
+    letter-spacing: 1px;
+    font-size: 15px;
+
+}

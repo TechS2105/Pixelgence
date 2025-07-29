@@ -234,10 +234,12 @@
     overflow: hidden;
     white-space: nowrap;
     position: relative;
+    z-index: -2;
     top: 20%;
     left: 10%;
     transform: rotate(90deg);
     background-color: #fff;
+    opacity: 0.3;
     box-shadow: 5px 5px 10px #2929296e;
 
 }
