@@ -71,7 +71,7 @@ function Footer() {
 
                     <div className={FooterStyle.footerCopyRight}>
 
-                        <p>&copy; {date} | Powered By <NavLink to="https://ssd-lsr3.onrender.com/" target="_blank">SSD</NavLink> | All Rights Reserved</p>
+                        <p>&copy; {date} | Developed By <NavLink to="https://ssd-lsr3.onrender.com/" target="_blank">SSD</NavLink> | All Rights Reserved</p>
 
                     </div>
 
