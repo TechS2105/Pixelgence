@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'stayTunedFont';
+    src: url('../fonts/syne/OTF/Syne-Bold.otf');
+}
+
+.aboutBannerImage{
+
+    width: 100%;
+    height: 100vh;
+    margin-top: -80px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.aboutBannerImage > img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    animation: bannerImageZoomAnime 10s ease;
+
+}
+
+@keyframes bannerImageZoomAnime {
+    
+    50%{
+
+        transform: scale(1.1);
+        filter: blur(0px);
+
+    }0%, 100%{
+
+        transform: scale(1);
+        filter: blur(5px);
+
+    }100%{
+
+        filter: blur(0px);
+
+    }
+
+}
+
+.stayTunedSection{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.stayTunedSection > h1{
+
+    font-family: 'stayTunedFont';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 80px;
+    text-align: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, #0e0e0e,#292929);
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(8px 8px 2px #d7d7d7);
+
+}
