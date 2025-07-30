@@ -6,7 +6,7 @@ function Contactdetailsbox({styleState, heading, mobile, email, location, image,
 
         <>
         
-            <div className={styleState.contactDetailsBox1} data-scroll data-scroll-speed={0.5}>
+            <div className={styleState.contactDetailsBox1} data-scroll data-scroll-speed={0.2}>
             
                 <div className={styleState.flipBoxInner}>
 

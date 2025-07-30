@@ -4,10 +4,12 @@ import ContactScrollBar from '../components/Allinonescrollbar';
 import Footer from '../components/Footer';
 import LocomotiveScroll from 'locomotive-scroll';
 import ContactDetailsBox from '../components/Contactdetailsbox';
+import ContactForm from '../components/Contactform';
 
-let img1 = "../../public/images/banner image/img1.jpg";
-let img2 = "../../public/images/banner image/img2.jpg";
-let img3 = "../../public/images/banner image/img3.jpeg";
+let img1 = "https://images.unsplash.com/photo-1600508773950-d522f5bb7606?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b2ZmaWNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D";
+let img2 = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fG9mZmljZSUyMGludGVyaW9yfGVufDB8fDB8fHww";
+let img3 = "https://plus.unsplash.com/premium_photo-1681487178876-a1156952ec60?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fG9mZmljZSUyMGludGVyaW9yfGVufDB8fDB8fHww";
+let img5 = "../../public/images/Contact image/img1.jpg"
 
 function Contact() {
 
@@ -18,8 +20,23 @@ function Contact() {
 
     });
 
+    const [mainContainerStyle, setMainContainerStyle] = useState({
+
+        opacity: "0",
+        filter: "blur(20px)"
+
+    })
+
     function handleContactLoad() {
         
+        setMainContainerStyle({
+
+            opacity: "1",
+            filter: "blur(0px)",
+            transition: "all 2s ease",
+
+        })
+
         setFirstSpan({
 
             transform: "translateY(0px)",
@@ -56,10 +73,11 @@ function Contact() {
 
         <>
         
-            <main data-scroll-container ref={scrollRef}  onLoad={handleContactLoad}>
+            <main data-scroll-container ref={scrollRef}  onLoad={handleContactLoad} style={mainContainerStyle}>
 
                 <div className={ContactStyle.contactBanner}>
 
+                    <img src={img5} alt="Contact Banner image" data-scroll data-scroll-speed={-0.2} />
                     <h1 style={firstSpan}> <span> Feel Free To </span> <span> Contact With Us </span> </h1>
                     <ContactScrollBar />
 
@@ -114,6 +132,31 @@ function Contact() {
 
                         <div className={ContactStyle.contactBox}>
 
+                            <div className={ContactStyle.contactMap}>
+
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.35196272633!2d-73.97950600000001!3d40.697141499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z4Kao4Ka_4KaJIOCmh-Cmr-CmvOCmsOCnjeCmlSwg4Kau4Ka-4Kaw4KeN4KaV4Ka_4KaoIOCmr-CngeCmleCnjeCmpOCmsOCmvuCmt-CnjeCmn-CnjeCmsA!5e0!3m2!1sbn!2sin!4v1753877915657!5m2!1sbn!2sin" width={600} height={450} style={{ border: 0,  }} allowFullScreen="" loading={"lazy"} referrerPolicy={"no-referrer-when-downgrade"}></iframe>
+
+                            </div>
+
+                            <div className={ContactStyle.contactForm}>
+
+                                <div className={ContactStyle.contactHeading}>
+
+                                    <h2> Get in touch </h2>
+
+                                </div>
+
+                                <div className={ContactStyle.form}>
+
+                                    <ContactForm
+                                    
+                                        ContactStyle={ContactStyle}
+                                        
+                                    />
+
+                                </div>
+                                
+                            </div>
 
                         </div>
 

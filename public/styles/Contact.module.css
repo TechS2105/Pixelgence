@@ -13,14 +13,41 @@
     src: url('../fonts//heebo/Heebo-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'contactFormHeadingFont';
+    src: url('../fonts/syne/OTF/Syne-Bold.otf');
+}
+
+@font-face {
+    font-family: 'contactFormInputFont';
+    src: url('../fonts/heebo/Heebo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'contactFromButtonFont';
+    src: url('../fonts/archivo/Archivo-Medium.ttf');
+}
+
 .contactBanner{
 
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to left, blue, aqua);
     margin-top: -80px;
     display: flex;
     align-items: center;
+    position: relative;
+
+}
+
+.contactBanner > img{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 
 }
 
@@ -28,28 +55,24 @@
 
     font-family: 'contactBannerFont';
     padding-left: 5%;
-    font-size: 150px;
+    font-size: 100px;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: linear-gradient(to right, #fff, rgb(0, 221, 255));
+    background-image: linear-gradient(to right, #fff, rgb(255, 255, 255));
     -webkit-text-fill-color: transparent;
     letter-spacing: 2px;
+    line-height: 115px;
     filter: drop-shadow(10px 10px 5px #29292957);
-
-}
-
-.contactBanner h1 > span{
-
-    display: inline-flex;
-    overflow: hidden;
+    width: 1000px;
 
 }
 
 .contactDetailsBox{
 
     width: 100%;
-    height: 150vh;
+    height: 160vh;
     background-color: rgb(255, 255, 255);
+    position: relative;
 
 }
 
@@ -67,7 +90,6 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
-    /* background-color: #292929; */
 
 }
 
@@ -123,7 +145,7 @@
 .flipBoxBack{
 
     color: #232222;
-    transform: rotateY(180deg);
+    transform:rotateY(180deg);
 
 }
 
@@ -164,5 +186,133 @@
 
     width: 100%;
     height: 70%;
+    display: flex;
+    justify-content: center;
 
 }
+
+.contactBox > .contactMap{
+
+    width: 50%;
+    height: 70%; 
+
+}
+
+.contactMap > iframe {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.contactBox > .contactForm{
+
+    width: 50%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.contactForm > .contactHeading{
+
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.contactHeading > h2{
+
+    font-family: 'contactFormHeadingFont';
+    padding-left: 50px;
+    font-weight: 500;
+    font-size: 30px;
+
+}
+
+.contactForm > .form{
+
+    width: 100%;
+    height: 75%;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.form > .formStyle{
+
+    padding-top: 30px;
+    padding-left: 50px;    
+
+}
+
+.formStyle > input{
+
+    margin-right: 10px;
+    margin-bottom:10px;
+    height: 70px;
+    width: 270px;
+    font-family: 'contactFormInputFont';
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+.formStyle > input{
+
+    padding-left: 30px;
+
+}
+
+.formStyle > input::placeholder{
+
+    color: gray;
+    transition: all 0.8s ease;
+
+} 
+
+.formStyle > input:focus::placeholder{
+
+    color: #232222;
+
+} 
+
+.formStyle > textarea{
+
+    font-size: 18px;
+    font-family: 'contactFormInputFont';
+    padding-left: 30px;
+    padding-top: 20px;
+    letter-spacing: 1px;
+    transition: all 0.8s ease;
+    color: gray;
+
+}
+
+.formStyle textarea > :focus{
+    
+    color: #232222;
+
+}
+
+.formStyle > button{
+
+    background-color: transparent;
+    border: 1px solid #292929;
+    width: 150px;
+    margin-top: 10px;
+    height: 50px;
+    color: #232222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+
