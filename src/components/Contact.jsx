@@ -9,7 +9,7 @@ import ContactForm from '../components/Contactform';
 let img1 = "https://images.unsplash.com/photo-1600508773950-d522f5bb7606?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b2ZmaWNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D";
 let img2 = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fG9mZmljZSUyMGludGVyaW9yfGVufDB8fDB8fHww";
 let img3 = "https://plus.unsplash.com/premium_photo-1681487178876-a1156952ec60?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzN8fG9mZmljZSUyMGludGVyaW9yfGVufDB8fDB8fHww";
-let img5 = "../../public/images/Contact image/img1.jpg"
+let img5 = "/images/Contact image/img1.jpg"
 
 function Contact() {
 
