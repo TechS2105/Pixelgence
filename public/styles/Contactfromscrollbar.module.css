@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'contactFromScrollBarFont';
+    src: url('../fonts/heebo/Heebo-Medium.ttf');
+}
+
+.contactFromScrollBar{
+
+    position: absolute;
+    left: 3%;
+    background-color: blue;
+    width: 1.5px;
+    height: 100%;
+    z-index: 9999;
+
+}
+
+.contactFromScrollBar > span{
+
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 5%;
+    background-color: #292929;
+
+}
+
+.contactFromScrollBar > span::after{
+
+    position: relative;
+    top: 0.5rem;
+    left: 1rem;
+    content: "Keep Scrolling";
+    font-family: 'contactFromScrollBarFont';
+    font-size: 15px;
+    letter-spacing: 1px;
+
+}

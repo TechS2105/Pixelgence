@@ -28,6 +28,26 @@
     src: url('../fonts/archivo/Archivo-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'contactFormErrorMessage';
+    src: url('../fonts//syne/OTF/Syne-Regular.otf');
+}
+
+@font-face {
+    font-family: 'contactFromSubmissionFont';
+    src: url('../fonts/syne/OTF/Syne-Regular.otf');
+}
+
+@font-face {
+    font-family: 'engagementHeadingFont';
+    src: url('../fonts/syne/OTF/Syne-Bold.otf');
+}
+
+@font-face {
+    font-family: 'engagementParaFont';
+    src: url('../fonts/heebo/Heebo-Regular.ttf');
+}
+
 .contactBanner{
 
     width: 100%;
@@ -71,8 +91,9 @@
 
     width: 100%;
     height: 160vh;
-    background-color: rgb(255, 255, 255);
     position: relative;
+    overflow: hidden;
+    z-index: -2;
 
 }
 
@@ -80,6 +101,8 @@
 
     width: 100%;
     height: 100%;
+    position: relative;
+    /* overflow: hidden; */
 
 }
 
@@ -188,6 +211,7 @@
     height: 70%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
 }
 
@@ -302,17 +326,258 @@
 
 .formStyle > button{
 
-    background-color: transparent;
+    background-color: #fff;
     border: 1px solid #292929;
     width: 150px;
     margin-top: 10px;
     height: 50px;
-    color: #232222;
+    color: #292929;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    font-family: 'contactFromButtonFont';
+    font-size: 15px;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 999;
+    transition: all 0.8s ease;
+
+}
+
+.formStyle > button:hover{
+
+    color: #fff;
+    border: 1px solid #fff;
+
+}
+
+.formStyle > button::before{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    content: "";
+    background-color: #292929;
+    z-index: -2;
+    transition: all 0.8s ease;
+    opacity: 0;
+
+}
+
+.formStyle > button:hover::before{
+
+    opacity: 1;
+    width: 100%;
+
+}
+
+.errorContactFromMessage{
+
+    font-family: 'contactFormErrorMessage';
+    letter-spacing: 1px;
+    margin: 5px 0px;
+
+}
+
+.formSubmissionMessage{
+
+    font-family: 'contactFromSubmissionFont';
+    letter-spacing: 1px;
+    margin-top: 5px 0px;
 
 }
 
 
+.contactEngagementBox{
+
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+
+}
+
+.contactEngagementBox > .joinTeam{
+
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(50deg, rgba(0, 255, 255, 0.482), rgba(0, 0, 255, 0.405));
+    background-size: 200% 100%;
+    animation: gradientAnime 5s ease infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@keyframes gradientAnime {
+    
+    0%{
+
+        background-position: 0% 50%;
+
+    }100%{
+
+        background-position: 100%, 50%;
+
+    }
+
+}
+
+.joinTeam > .textSection{
+
+    width: 70%;
+
+}
+
+.joinTeam .textSection > h3{
+
+    font-size: 45px;
+    font-family: 'engagementHeadingFont';
+    padding-left: 20%;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 2px;
+
+}
+
+.joinTeam .textSection > p{
+
+    padding-left: 20%;
+    font-family: 'engagementParaFont';
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+
+.joinTeam > .iconSection{
+
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.joinTeam .iconSection > .rightArrowIcon{
+
+    width: 80px;
+    height: 80px;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+.rightArrowIcon > svg{
+
+    color: #fff;
+    font-size: 35px;
+    transition: all 0.8s ease;
+
+}
+
+.rightArrowIcon:hover > svg{
+
+    transform: translateX(5px);
+
+}
+
+.contactEngagementBox > .newsLetter{
+
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to right, #F3F3F3, #c1c1c184);
+    background-size: 200% 100%;
+    animation: secondGraidentAnime 5s ease infinite alternate;
+    display: flex;
+    align-items: center;
+
+}
+
+@keyframes secondGraidentAnime {
+
+    0%{
+
+        background-position: 0% 50%;
+
+    }100%{
+
+        background-position: 100% 50%;
+
+    }
+    
+}
+
+.newsLetter > .textSection{
+
+    width: 70%;
+
+}
+
+.newsLetter .textSection > h3{
+
+    font-size: 45px;
+    font-family: 'engagementHeadingFont';
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-left: 20%;
+    margin-bottom: 20px;
+    color: #292929;
+
+}
+
+.newsLetter .textSection > p{
+
+    font-family: 'engagementParaFont';
+    padding-left: 20%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: #292929;
+
+
+}
+
+.newsLetter > .iconSection{
+
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.iconSection > .rightArrow{
+
+    width: 80px;
+    height: 80px;
+    border: 1px solid #292929;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.iconSection .rightArrow > svg{
+
+    font-size: 35px;
+    transition: all 0.8s ease;
+
+}
+
+.iconSection .rightArrow:hover > svg{
+
+    transform: translateX(5px);
+
+}

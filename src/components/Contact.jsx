@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import LocomotiveScroll from 'locomotive-scroll';
 import ContactDetailsBox from '../components/Contactdetailsbox';
 import ContactForm from '../components/Contactform';
+import ContactFromSectionScrollBar from '../components/Contactformscrollbar';
+import ContactEngagementSection from '../components/Contactengagement';
 
 let img1 = "https://images.unsplash.com/photo-1600508773950-d522f5bb7606?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b2ZmaWNlJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D";
 let img2 = "https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fG9mZmljZSUyMGludGVyaW9yfGVufDB8fDB8fHww";
@@ -85,8 +87,8 @@ function Contact() {
 
                 <div className={ContactStyle.contactDetailsBox}>
 
-                    <ContactScrollBar />
-
+                    <ContactFromSectionScrollBar />
+                    
                     <div className={ContactStyle.contactSubBox}>
 
                         <div className={ContactStyle.contactDetails}>
@@ -132,13 +134,13 @@ function Contact() {
 
                         <div className={ContactStyle.contactBox}>
 
-                            <div className={ContactStyle.contactMap}>
+                            <div className={ContactStyle.contactMap} data-scroll data-scroll-speed={0.2}>
 
                                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.35196272633!2d-73.97950600000001!3d40.697141499999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z4Kao4Ka_4KaJIOCmh-Cmr-CmvOCmsOCnjeCmlSwg4Kau4Ka-4Kaw4KeN4KaV4Ka_4KaoIOCmr-CngeCmleCnjeCmpOCmsOCmvuCmt-CnjeCmn-CnjeCmsA!5e0!3m2!1sbn!2sin!4v1753877915657!5m2!1sbn!2sin" width={600} height={450} style={{ border: 0,  }} allowFullScreen="" loading={"lazy"} referrerPolicy={"no-referrer-when-downgrade"}></iframe>
 
                             </div>
 
-                            <div className={ContactStyle.contactForm}>
+                            <div className={ContactStyle.contactForm} data-scroll data-scroll-speed={0.3}>
 
                                 <div className={ContactStyle.contactHeading}>
 
@@ -159,10 +161,16 @@ function Contact() {
                             </div>
 
                         </div>
-
+   
                     </div>
 
                 </div>
+
+                <ContactEngagementSection
+                
+                    ContactStyle={ContactStyle}
+                    
+                />
 
             </main>
 

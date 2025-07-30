@@ -92,10 +92,115 @@ const sendNewsletterMail = (req, res) => {
 
 }
 
+/** Create contact from GET end point */
+const contactFromGet = (req, res) => {
+
+    res.json({ message: "Contact from server is running..." });
+
+}
+
+/** Create contact from nodemailer template */
+const contactFromData = nodeMailer.createTransport({
+
+    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 467,
+    logger: false,
+    debug: true,
+    secure: true,
+    secureConnection: true,
+    auth: {
+        
+        user: process.env.EMAIL,
+        pass: process.env.PASSWORD
+
+    },
+    tls: {
+
+        rejectUnauthorized: true
+
+    }
+
+});
+
+/** Verify contact from nodemailer template */
+contactFromData.verify((error) => {
+
+    if (error) {
+        
+        console.log(error);
+
+    } else {
+        
+        console.log("Ready to send contact form data...")
+
+    }
+
+});
+
+/** Create contact from POST Endpoint */
+const contactFromPostData = (req, res) => {
+
+    const { fullname, email, message } = req.body;
+
+    const mail = {
+
+        from: `${email}`,
+        to: process.env.EMAIL,
+        subject: `New Contact Details From Pixelgence Contact From `,
+        html: `
+        
+            <table>
+
+                <tbody>
+                
+                    <tr>
+                    
+                        <td>${fullname}</td>
+
+                    </tr>
+
+                    <tr>
+                    
+                        <td>${message}</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        `
+
+    }
+
+    contactFromData.sendMail(mail, (error) => {
+
+        if (error) {
+            
+            res.json({ message: error });
+
+        } else {
+            
+            res.json({
+
+                code: 200,
+                message: "Contact details are successfully submitted."
+
+            });
+
+        }
+
+    });
+
+}
+
 export default {
 
     serverGetMessage,
     mailGetMessage,
     sendNewsletterMail,
+    contactFromGet,
+    contactFromPostData,
 
 }
