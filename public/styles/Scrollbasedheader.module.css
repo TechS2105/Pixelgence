@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'scrollHeaderLogoFont';
+    src: url('../fonts/heebo/Heebo-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'scrollNavFont';
+    src: url('../fonts/archivo/Archivo-Medium.ttf');
+}
+
+.scrollHeader{
+
+    width: 100%;
+    height: 6rem;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 999999999999;
+    top: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.scrollHeader > .scrollHeaderLogo{
+
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.scrollHeaderLogo > a, h1{
+
+    font-family: 'scrollHeaderLogoFont';
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 20px;
+    color: #292929;
+    letter-spacing: 2px;
+
+}

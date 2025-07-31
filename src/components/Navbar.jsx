@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import NavStyle from '../../public/styles/Navbar.module.css';
 import { NavLink } from 'react-router-dom';
+import ScrollBasedHeader from '../components/Scrollbasedheader';
 
 function Navbar() {
 
@@ -74,7 +75,10 @@ function Navbar() {
     
     return (
 
-        <header>
+        <>
+            
+            <ScrollBasedHeader />
+            <header>
 
             <div className={NavStyle.logodiv}>
 
@@ -137,7 +141,9 @@ function Navbar() {
                         
             </div>
 
-        </header>
+            </header>
+
+        </>
 
     );
 
