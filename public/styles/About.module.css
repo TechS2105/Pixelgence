@@ -52,20 +52,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(to left, blue, aqua);
 
 }
 
 .stayTunedSection > h1{
 
     font-family: 'stayTunedFont';
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 2px;
-    font-size: 80px;
-    text-align: center;
+    font-size: 100px;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: linear-gradient(to right, #0e0e0e,#292929);
+    background-image: linear-gradient(to right, #f9f9f9,#fefefe);
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(8px 8px 2px #d7d7d7);
+    padding-left: 100px;
 
 }

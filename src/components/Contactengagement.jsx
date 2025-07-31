@@ -1,25 +1,33 @@
 import React from 'react';
 import { SlArrowRight } from "react-icons/sl";
+import EngagementContent from '../components/Engagementcontent';
+import ContactEngagementScrollBar from '../components/Contactengagementscrollbar';
 
 function Contactengagement({ContactStyle}) {
     
     return (
 
         <>
-            
+
             <div className={ContactStyle.contactEngagementBox}>
+
+                <ContactEngagementScrollBar />
 
                     <div className={ContactStyle.joinTeam}>
 
-                        <div className={ContactStyle.textSection}>
+                        <div className={ContactStyle.textSection} data-scroll data-scroll-speed={0.3}>
 
-                            <h3> Join Our Team </h3>
-                            <p>Unlock your potential—collaborate, innovate, and grow with our visionary digital marketing team.</p>
+                            <EngagementContent
+                            
+                                title="Join Our Team"
+                                content="Unlock your potential—collaborate, innovate, and grow with our visionary digital marketing team."
+                                
+                            />
                         
                         </div>
                         <div className={ContactStyle.iconSection}>
                         
-                            <div className={ContactStyle.rightArrowIcon}>
+                            <div className={ContactStyle.rightArrowIcon} data-scroll data-scroll-speed={0.3}>
                             
                                 <SlArrowRight />
 
@@ -31,16 +39,20 @@ function Contactengagement({ContactStyle}) {
 
                     <div className={ContactStyle.newsLetter}>
 
-                        <div className={ContactStyle.textSection}>
+                        <div className={ContactStyle.textSection} data-scroll data-scroll-speed={0.3}>
                         
-                            <h3> Our Newsletter </h3>
-                            <p>Stay ahead with insights, trends, and innovations. Subscribe to our creative digital marketing newsletter today.</p>
-
+                            <EngagementContent
+                            
+                                title="Our Newsletter"
+                                content="Stay ahead with insights, trends, and innovations. Subscribe to our creative digital marketing newsletter today."
+                                
+                            />
+                        
                         </div>
                     
                         <div className={ContactStyle.iconSection}>
                         
-                            <div className={ContactStyle.rightArrow}>
+                            <div className={ContactStyle.rightArrow} data-scroll data-scroll-speed={0.3}>
                             
                                 <SlArrowRight />
 
