@@ -22,13 +22,13 @@ function Scrollbasedheader() {
 
         transform: "rotate(50deg) translate(-2px, -3px)",
         width: "35px",
-        transition: "all 0.8s ease",
+        transition: "all 1s ease 0.5s",
 
     } : {
         
         transform: "translate(0px, 0px) rotate(0deg)",
         width: "50px",
-        transition: "all 0.8s ease",
+        transition: "all 1s ease",
 
     }
 
@@ -36,13 +36,13 @@ function Scrollbasedheader() {
 
         transform: "rotate(-50deg) translate(8px, -5px)",
         width: "35px",
-        transition: "all 0.8s ease"
+        transition: "all 1s ease 0.5s"
 
     } : {
 
         transfrom: "rotate(0deg) translate(0px, 0px)",
         width: "30px",
-        transition: "all 0.8s ease",
+        transition: "all 1s ease",
 
     }
 
@@ -57,13 +57,13 @@ function Scrollbasedheader() {
     const scrollSideMenuMainBox = isActiveSideMainMenuBox ? {
 
         transform: "translateX(0px)",
-        transition: 'all 1.5s ease',
+        transition: 'all 1s ease',
         opacity: "1"
 
     } : {
 
         transform: "translateX(2000px)",
-        transition: "all 1.5s ease 0.3s",
+        transition: "all 1s ease 0.3s",
         opacity: "0"
 
     }
@@ -71,13 +71,13 @@ function Scrollbasedheader() {
     const scrollSideMenuInnerBox = isActiveSideInnerMenuBox ? {
 
         transfrom: "translateX(0px)",
-        transition: 'all 1.5s ease 0.1s',
+        transition: 'all 1s ease 0.1s',
         opacity: "1",
 
     } : {
 
         transform: "translateX(1000px)",
-        transition: "all 1.5s ease",
+        transition: "all 1s ease",
         opacity: "0",
 
     }
@@ -184,6 +184,21 @@ function Scrollbasedheader() {
 
                     <div className={ScrollBasedHeaderStyle.scrollInnerSubMenu} style={scrollSideMenuInnerBox}>
 
+                        <div className={ScrollBasedHeaderStyle.scrollInnerSubMenuFirstBox}>
+
+                            <h2> Elevating Brands Through Innovation </h2>
+                            <p>We transform brands with AI, full-stack development, bold design, and inventive marketing to shape tomorrow’s digital future.</p>
+                            <NavLink to="#">pixelgence@businessemail.com</NavLink>
+
+                        </div>
+
+                        <div className={ScrollBasedHeaderStyle.scrollInnerSubMenuSecondBox}>
+
+                            <NavLink to="#"> Facebook</NavLink>
+                            <NavLink to="#"> Instagram</NavLink>
+                            <NavLink to="#"> Twitter</NavLink>
+
+                        </div>
 
                     </div>
 
