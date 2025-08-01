@@ -23,7 +23,7 @@ const banner = [
 
         id: 3,
         image: 'https://images.pexels.com/photos/7988745/pexels-photo-7988745.jpeg',
-        title: "Future-Ready Dev Support",
+        title: "Future Ready Dev Support",
         buttonText: "READ MORE",
 
     },
