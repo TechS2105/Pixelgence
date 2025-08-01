@@ -43,11 +43,11 @@ function Homebanner() {
            
           >
             
-            {Banners.map((banner) => {
+            {Banners.map((banner, idx) => {
             
               return (
               
-                <SwiperSlide className={HomeBannerStyle.swiperBanner} key={banner.id}>
+                <SwiperSlide className={HomeBannerStyle.swiperBanner} key={idx}>
                   
                   <HomeBannerImage image={banner.image} title={banner.title} />
 
