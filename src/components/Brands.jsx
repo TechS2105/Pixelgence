@@ -15,10 +15,10 @@ function Brands() {
     return (
 
         <>
-        
-            <SixthScrollBar />
 
             <div className={BrandStyle.brandContainer}>
+
+                <SixthScrollBar />
 
                 <div className={BrandStyle.brandContent} data-scroll data-scroll-speed={0.3}>
 

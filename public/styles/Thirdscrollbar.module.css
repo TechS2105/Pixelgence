@@ -10,7 +10,7 @@
     background-color: rgb(166, 18, 240);
     position: absolute;
     left: 3%;
-    z-index: 99;
+    z-index: 999;
 
 }
 

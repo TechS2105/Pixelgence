@@ -5,7 +5,7 @@ function Sixthscrollbar() {
     
     return (
 
-        <div className={SixthScrollBarStyle.scrollBar} data-scroll data-scroll-speed={0.1}>
+        <div className={SixthScrollBarStyle.scrollBar} data-scroll data-scroll-speed={0.2}>
 
             <span></span>
 

@@ -16,9 +16,10 @@ function Blogsection() {
     return (
 
         <>
-            <ForuthScrollBar />
 
             <div className={BlogSectionStyle.blogSection} data-scroll data-scroll-speed={0.2}>
+
+                <ForuthScrollBar />
 
                 <Swiper className={BlogSectionStyle.swiperSection}
                 

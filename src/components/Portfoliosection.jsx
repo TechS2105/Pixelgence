@@ -12,10 +12,10 @@ function Portfoliosection() {
     return (
 
         <>
-        
-            <SecondScrollBar />
             
             <div className={PortfolioSectionStyle.portfolioDiv} data-scroll data-scroll-speed={0.2}>
+
+                <SecondScrollBar />
 
                 <div className={PortfolioSectionStyle.portfolioContentDiv}>
 

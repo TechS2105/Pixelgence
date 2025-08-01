@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import OurTeamStyle from '../../public/styles/Ourteam.module.css';
 import OurTeamContent from '../../custom objects/ourteamcontent.js';
+import FifthScrollBar from '../components/Fifthscrollbar.jsx';
 
 function Ourteam() {
 
@@ -18,6 +19,8 @@ function Ourteam() {
         <>
         
             <div className={OurTeamStyle.ourTeamSection}>
+
+                <FifthScrollBar />
 
                 <div className={OurTeamStyle.ourTeamBox1} data-scroll data-scroll-speed={0.3}>
 

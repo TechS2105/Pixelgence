@@ -14,10 +14,10 @@ function Homebanner() {
     return (
 
       <>
-      
-        <ScrollBar />
 
         <div className={HomeBannerStyle.bannderDiv} data-scroll data-scroll-speed={-0.2}>
+
+           <ScrollBar />
 
           <Swiper className={HomeBannerStyle.swiperCarousel}
             

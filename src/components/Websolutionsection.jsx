@@ -9,10 +9,10 @@ function Websolutionsection() {
     return (
 
         <>
-           
-            <ThirdScrollBar />
             
             <div className={WebSolutionStyle.webSolutionDiv}>
+
+                <ThirdScrollBar />
 
                 <img src={img} alt="office view" data-scroll data-scroll-speed={ -0.5 } />
 

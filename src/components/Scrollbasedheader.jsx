@@ -110,12 +110,11 @@ function Scrollbasedheader() {
 
     },[]) 
 
-    const scrollHeaderEvent = useCallback((e) => {
+    const scrollHeaderEvent = useCallback(() => {
 
         if (window.scrollY > 1000) {
             
             scrollOnWheelEvent();
-            e.preventDefault();
 
         }else {
             
