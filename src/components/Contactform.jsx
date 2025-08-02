@@ -16,7 +16,7 @@ function Contactform({ ContactStyle }) {
         
         try {
             
-            const response = await fetch('http://localhost:3000/api/send/contact/form/data', {
+            const response = await fetch('https://pixelgence-backend.onrender.com/api/send/contact/form/data', {
 
                 headers: { "Content-Type": "application/json; charset=utf-8" },
                 method: "POST",

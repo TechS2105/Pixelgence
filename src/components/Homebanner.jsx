@@ -28,7 +28,7 @@ function Homebanner() {
 
             autoplay={{
 
-              delay: 3000,
+              delay: 5000
 
             }}
             
