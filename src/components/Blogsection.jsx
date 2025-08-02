@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import BlogSectionStyle from '../../public/styles/Blogsection.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -12,12 +12,86 @@ import ForuthScrollBar from '../components/Fourthscrollbar.jsx';
 function Blogsection() { 
 
     const [activeIndex, setActiveIndex] = useState();
+    
+    const [swiperBlogBoxAnime, setSwiperBlogBoxAnime] = useState({
+
+        transform: 'translateY(2000px)',
+        opacity: "0",
+        filter: "blur(50px)"
+
+    });
+
+    const [navigationArrow, setNavigationArrow] = useState({
+
+        transform: 'translateX(1000px)',
+        opacity: "0",
+        filter: "blur(10px)"
+
+    })
+
+    function handleSwiperBlogScroll() {
+
+       if(window.scrollY >= 2100){
+
+            setSwiperBlogBoxAnime({
+
+                opacity: "1",
+                transform: "translateY(0px)",
+                filter: "blur(0px)",
+                transition: "all 1.5s ease",
+
+            })
+           
+       } else {
+           
+           setSwiperBlogBoxAnime({
+               
+               opacity: "0",
+               filter: "blur(50px)",
+               transform: "translateY(2000px)",
+               transition: "all 1.5s ease"
+               
+           })
+           
+       }
+
+        if (window.scrollY >= 2400) {
+           
+            setNavigationArrow({
+
+                transform: "translateX(0px)",
+                transition: "all 1s ease",
+                opacity: '1',
+                filter: "blur(0px)",
+
+            });
+
+        } else {
+            
+            setNavigationArrow({
+
+                transform: "translateX(1000px)",
+                transition: 'all 1s ease',
+                opacity: "0",
+                filter: "blur(10px)",
+
+            })
+
+       }
+
+    }
+
+    useEffect(() => {
+
+        window.addEventListener("scroll", handleSwiperBlogScroll)
+
+    }, [])
 
     return (
 
         <>
 
-            <div className={BlogSectionStyle.blogSection} data-scroll data-scroll-speed={0.2}>
+            <div className={BlogSectionStyle.blogSection} data-scroll data-scroll-speed={0.2} onScroll={handleSwiperBlogScroll}>
 
                 <ForuthScrollBar />
 
@@ -41,6 +115,7 @@ function Blogsection() {
                     }}
                     
                     modules={[Autoplay, Navigation]}
+                    style={swiperBlogBoxAnime}
                     
                 >
 
@@ -50,7 +125,7 @@ function Blogsection() {
 
                             <SwiperSlide className={BlogSectionStyle.swiperBox} key={idx} onMouseOver={() => setActiveIndex(idx)} onMouseOut={() => setActiveIndex()}>
 
-                                <NavLink to="#">
+                                <a href="#">
 
                                     <div className={BlogSectionStyle.swiperImage}>
 
@@ -66,7 +141,7 @@ function Blogsection() {
 
                                     </div>
 
-                                </NavLink>
+                                </a>
                                 
 
                             </SwiperSlide>
@@ -80,7 +155,7 @@ function Blogsection() {
 
                 <div className={BlogSectionStyle.swiperNavigationSection}>
 
-                    <div className={BlogSectionStyle.swiperNavigation}>
+                    <div className={BlogSectionStyle.swiperNavigation} style={navigationArrow}>
 
                         <div id="prevArrow" className={BlogSectionStyle.prevArrow}>
 
