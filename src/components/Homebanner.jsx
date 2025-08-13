@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import HomeBannerStyle from '../../public/styles/Homebanner.module.css';
 import Banners from '../../custom objects/banner.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,6 +10,8 @@ import HomeBannerContent from '../components/Homebannercontent.jsx';
 import ScrollBar from '../components/Scrollbar.jsx';
 
 function Homebanner() {
+
+    const [activeIndex, setActiveIndex] = useState(null);
 
     return (
 
@@ -24,11 +26,11 @@ function Homebanner() {
           slidesPerView={1}
           loop={true}
           effect={"fade"}
-          speed={3000}
+          speed={2000}
 
             autoplay={{
 
-              delay: 5000
+              delay: 3000
 
             }}
             
@@ -40,6 +42,7 @@ function Homebanner() {
             }}
             
             modules={[Autoplay, Navigation, EffectFade]}
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
            
           >
             
@@ -57,6 +60,9 @@ function Homebanner() {
                       
                       bannerTitle={banner.title}
                       buttonText={banner.buttonText}
+                      activeIndex={activeIndex}
+                      idx={idx}
+                      HomeBannerStyle={HomeBannerStyle}
           
                     />
 
