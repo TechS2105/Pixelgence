@@ -11,7 +11,7 @@ import ScrollBar from '../components/Scrollbar.jsx';
 
 function Homebanner() {
 
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
 
