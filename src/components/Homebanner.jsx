@@ -24,7 +24,7 @@ function Homebanner() {
           slidesPerView={1}
           loop={true}
           effect={"fade"}
-          speed={2000}
+          speed={3000}
 
             autoplay={{
 
